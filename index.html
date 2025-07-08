@@ -11,7 +11,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("u8L9y0qcJ3tGApp86"); // Your real public key
+      emailjs.init("public"); // Your real public key
     })();
   </script>
 </head>
@@ -81,13 +81,13 @@
 
   <script>
     //  Ensure public key is initialized
-    emailjs.init("u8L9y0qcJ3tGApp86");
+    emailjs.init("public");
 
     document.getElementById("booking-form").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      emailjs.sendForm("service_6q2e7uq", "template_im2tdyo", this)
-            emailjs.sendForm("service_6q2e7uq", "template_wq51e9a", this)
+      emailjs.sendForm("service", "", this)
+            emailjs.sendForm("service", "template", this)
 
         .then(function (res) {
           console.log("SUCCESS", res);
